@@ -3,4 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/content'],
+  ssr: true,
+  routeRules: {
+    '/blog/**': { prerender: true },
+    '/': { prerender: true } // 메인 페이지도 정적으로 생성
+  },
 })
