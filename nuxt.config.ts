@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content'],
   ssr: true,
   routeRules: {
-    '/blog/**': { prerender: true },
-    '/': { prerender: true } // 메인 페이지도 정적으로 생성
+    '/blog/**': { prerender: true }
   },
 })
