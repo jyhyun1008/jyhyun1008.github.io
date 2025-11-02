@@ -4,8 +4,6 @@
 
 const posts = await queryCollection('blog').order('date', 'DESC').all()
 
-console.log(posts)
-
 </script>
 
 <template>
