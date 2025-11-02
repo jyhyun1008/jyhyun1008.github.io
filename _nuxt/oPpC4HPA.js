@@ -1,0 +1,1 @@
+import{_ as s,c as t,a as n,o}from"./C0n0KbVP.js";const c={},a={class:"page-content"};function r(l,e){return o(),t("div",a,[...e[0]||(e[0]=[n("h1",null,"Links",-1),n("p",null,"연이나에 대해서 ",-1)])])}const i=s(c,[["render",r]]);export{i as default};
