@@ -132,10 +132,6 @@ h1, h2 {
   border-bottom: 1px solid var(--accentdark);
 }
 
-li {
-    margin: 10px 0;
-}
-
 #app-wrapper {
     margin: 0 auto;
     width: 100%;
