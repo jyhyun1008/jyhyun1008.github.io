@@ -28,4 +28,8 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
     width: 100%;
     margin: 0 auto;
 }
+
+.blog-content a {
+  color: var(--accent);
+}
 </style>
