@@ -13,6 +13,17 @@ export default defineContentConfig({
         thumb: z.string().optional(),
         tags: z.array(z.string()).optional()
       })
+    }),
+    music: defineCollection({
+      type: 'page',
+      source: 'music/*.md',
+      schema: z.object({
+        title: z.string(),
+        date: z.date(),
+        description: z.string().optional(),
+        youtube: z.string(),
+        tags: z.array(z.string()).optional()
+      })
     })
   }
 })
