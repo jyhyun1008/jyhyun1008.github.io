@@ -52,6 +52,12 @@ const posts = await queryCollection('blog').order('date', 'DESC').all()
     overflow: hidden;
 }
 
+.postDesc {
+    width: 100%;
+    height: 4rem;
+    overflow: hidden;
+}
+
 .postThumb {
     width: 100%;
     aspect-ratio: 16 / 9;

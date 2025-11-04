@@ -134,6 +134,12 @@ h1, h2 {
   border-bottom: 1px solid var(--accentdark);
 }
 
+span.buttonDark {
+  padding: 10px;
+  background-color: white;
+  color: var(--accent);
+}
+
 #app-wrapper {
     margin: 0 auto;
     width: 100%;
@@ -162,20 +168,27 @@ img {
     display: grid;
     width: 100%;
     margin: 50px auto;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
 }
 
 .listTitle {
     width: 100%;
-    max-width: 1400px;
+    /* max-width: 1400px; */
+    margin: 0.67em auto;
 }
 
 @media (min-width: 700px) and (max-width: 1200px) {
   
   #postList-box, #musicList-box{
     grid-template-columns: 1fr 1fr;
+  }
+
+  #app-wrapper {
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 20px;
   }
 
 }

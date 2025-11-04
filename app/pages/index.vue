@@ -9,7 +9,21 @@ const musics = await queryCollection('music').order('date', 'DESC').limit(4).all
 
 <template>
     <div>
-        <h2 class="listTitle">Portfolio (릴리즈 & 커미션)</h2>
+        <div id="mainHeader" style="">
+            <div class="page-content">
+                <div id="mainGrid">
+                    <div>
+                        <h1 style="border-bottom: 0; margin: 0; font-size: 4rem; color: white;">환영합니다</h1>
+                        <div>연이나의 개인 블로그에 어서오세요!</div>
+                        <div>개인 음악 작업물에 대한 감상, 그리고 프로젝트를 꾸려가는 데 대한 기술적인 이야기를 다룹니다.</div>
+                        <div><br /><a href="/about/"><span class="buttonDark">더 알아보기</span></a></div>
+                    </div>
+                    <img src="/main2.png" id="mainImage"/>
+                    
+                </div>
+            </div>
+        </div>
+        <h2 class="listTitle">포트폴리오 (릴리즈 & 커미션)</h2>
         <div id="musicList-box">
             <div v-for="music in musics" :key="music.path.split('/')[2]" class="postList">
             <NuxtLink :to="music.path">
@@ -25,7 +39,7 @@ const musics = await queryCollection('music').order('date', 'DESC').limit(4).all
             </NuxtLink>
             </div>
         </div>
-        <h2 class="listTitle">Posts</h2>
+        <h2 class="listTitle">블로그 포스트</h2>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">
             <NuxtLink :to="post.path">
@@ -45,6 +59,44 @@ const musics = await queryCollection('music').order('date', 'DESC').limit(4).all
 </template>
 
 <style>
+
+#mainHeader {
+    background-color:
+    var(--accent);
+    margin: 0 -50px;
+    color: white;
+    padding-bottom: 50px;
+}
+
+#mainImage {
+    border-radius: 10px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+#mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1em;
+}
+
+@media (max-width: 1200px) {
+
+    #mainHeader {
+        margin: 0 -20px;
+    }
+  
+    #mainImage {
+        display: none;
+    }
+
+    #mainGrid {
+        width: 100%;
+        display: block;
+        padding: 20px;
+    }
+} 
 
 .postList {
     width: 100%;

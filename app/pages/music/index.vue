@@ -51,6 +51,12 @@ const posts = await queryCollection('music').order('date', 'DESC').all()
     overflow: hidden;
 }
 
+.postDesc {
+    width: 100%;
+    height: 4rem;
+    overflow: hidden;
+}
+
 .postDate {
     font-size: 0.8rem;
     color: var(--accentdark);
