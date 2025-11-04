@@ -102,7 +102,7 @@ IK 타깃은 오른손으로 지정해주시고, 포지션은 0에서부터 올�
 
 왼손, 오른손 둘다 조정해봅시다. 앵커들 중 베이스 넥은 조정할 필요 없습니다! 잘 조정해준다면 제가 맨 위에 먼저 보여드린 결과물처럼 나오게 됩니다.
 
-<iframe width="740" height="315" src="https://www.youtube.com/embed/ySl1Tg47Wqs?si=eZzRvcbqjDEBm7bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="youtube" src="https://www.youtube.com/embed/ySl1Tg47Wqs?si=eZzRvcbqjDEBm7bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 와루도 기본 트래커가 오른손 트래킹을 너무 기괴하게 해주는데다 왼팔도 그렇게 마음에 들게 해주지 않습니다. 그래서 이 영상이 최선이군요. 영상에서 어색한 부분은 자세히 보시면 아시겠지만 캐릭터 자체의 움직임의 어색함이라서(...) 감안하고 봐주시면 감사하겠습니다.
 

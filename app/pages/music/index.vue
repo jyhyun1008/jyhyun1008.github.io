@@ -14,10 +14,12 @@ const posts = await queryCollection('music').order('date', 'DESC').all()
                 <iframe class="youtube" :src="post.youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="padding10">
                     <div class="postInfo">
-                    <div class="postTitle">{{ post.title }}</div>
-                    <span class="postDate">{{ post.date.split('T')[0] }}</span>
+                        <div class="postTitle">{{ post.title }}</div>
+                        <span class="postDate">{{ post.date.split('T')[0] }}</span>
                     </div>
-                    <div style="display: flex; gap: 5px; margin-bottom: 8px;"><code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code></div>
+                    <div style="display: flex; gap: 5px; margin-bottom: 8px;">
+                        <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code>
+                    </div>
                     <div class="postDesc">{{ post.description }}</div>
                 </div>
             </NuxtLink>
@@ -43,13 +45,6 @@ const posts = await queryCollection('music').order('date', 'DESC').all()
 
 .postTitle {
     font-weight: 700;
-}
-
-.youtube {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: center;
 }
 
 .postDate {

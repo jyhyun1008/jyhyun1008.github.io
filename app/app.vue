@@ -151,6 +151,13 @@ img {
   max-width: 100%;
 }
 
+.youtube {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
 #postList-box, #musicList-box {
     display: grid;
     width: 100%;
