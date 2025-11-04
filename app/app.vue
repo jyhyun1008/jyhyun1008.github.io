@@ -151,7 +151,7 @@ img {
   max-width: 100%;
 }
 
-#postList-box {
+#postList-box, #musicList-box {
     display: grid;
     width: 100%;
     margin: 50px auto;
@@ -162,7 +162,7 @@ img {
 
 @media (min-width: 700px) and (max-width: 1200px) {
   
-  #postList-box{
+  #postList-box, #musicList-box{
     grid-template-columns: 1fr 1fr;
   }
 
@@ -170,7 +170,7 @@ img {
 
 @media (max-width: 699px) {
   
-  #postList-box{
+  #postList-box, #musicList-box {
     grid-template-columns: 1fr;
     gap: 20px;
   }

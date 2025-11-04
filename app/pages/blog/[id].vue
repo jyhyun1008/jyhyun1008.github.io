@@ -8,6 +8,7 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 
 <template>
     <div class="blog-content">
+        <div><a href="/blog/">&lt; 메인으로</a></div>
         <div style="display: flex; gap: 5px; justify-content: center; margin-top: 50px;">
             <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code>
         </div>

@@ -3,18 +3,18 @@
     <div id="titlebox">
         <div id="title"><a href="/">Howeverina Studio</a></div>
         <div id="navbox">
-            <div class="nav-item"><a href="/about">About Me</a></div>
-            <div class="nav-item"><a href="/music">Portfolio</a></div>
-            <div class="nav-item">Study</div>
-            <div class="nav-item"><a href="/links">Links</a></div>
+            <div class="nav-item"><a href="/about/">About Me</a></div>
+            <div class="nav-item"><a href="/music/">Portfolio</a></div>
+            <div class="nav-item"><a href="/blog/">Blog</a></div>
+            <div class="nav-item"><a href="/links/">Links</a></div>
         </div>
         <div id="navbox-mobile">
           <div id="nav-icon">≡</div>
           <div id="nav-mobile-menu">
-            <div class="nav-item"><a href="/about">About Me</a></div>
-            <div class="nav-item"><a href="/music">Portfolio</a></div>
-            <div class="nav-item">Study</div>
-            <div class="nav-item"><a href="/links">Links</a></div>
+            <div class="nav-item"><a href="/about/">About Me</a></div>
+            <div class="nav-item"><a href="/music/">Portfolio</a></div>
+            <div class="nav-item"><a href="/blog/">Blog</a></div>
+            <div class="nav-item"><a href="/links/">Links</a></div>
           </div>
         </div>
     </div>
