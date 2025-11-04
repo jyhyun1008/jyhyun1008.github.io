@@ -87,4 +87,12 @@ const musics = await queryCollection('music').order('date', 'DESC').limit(4).all
 .padding10 {
     padding: 10px;
 }
+
+.youtube {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
 </style>
