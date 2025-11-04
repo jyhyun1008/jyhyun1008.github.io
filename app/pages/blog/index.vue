@@ -46,6 +46,9 @@ const posts = await queryCollection('blog').order('date', 'DESC').all()
 
 .postTitle {
     font-weight: 700;
+    width: 70%;
+    height: 2rem;
+    overflow: hidden;
 }
 
 .postThumb {
