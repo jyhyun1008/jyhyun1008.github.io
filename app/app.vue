@@ -167,6 +167,11 @@ img {
     gap: 10px;
 }
 
+.listTitle {
+    width: 100%;
+    max-width: 1400px;
+}
+
 @media (min-width: 700px) and (max-width: 1200px) {
   
   #postList-box, #musicList-box{
