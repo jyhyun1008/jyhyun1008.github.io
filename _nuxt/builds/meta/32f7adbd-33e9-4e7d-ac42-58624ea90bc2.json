@@ -1,1 +1,0 @@
-{"id":"32f7adbd-33e9-4e7d-ac42-58624ea90bc2","timestamp":1762273259008,"matcher":{"static":{"/__nuxt_content/blog/sql_dump.txt":{"prerender":true},"/__nuxt_content/music/sql_dump.txt":{"prerender":true}},"wildcard":{"/blog":{"prerender":true}},"dynamic":{}},"prerendered":["/","/links","/about","/music","/music/slowly","/music/paradichlorobenzene"]}
