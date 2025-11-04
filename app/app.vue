@@ -113,6 +113,7 @@
   --accent: #6200EE;
   --accentdark: #e3ccffff;
   --bg: #6200EE;
+  --bglight: #e3ccff22;
 }
 
 body {
@@ -121,6 +122,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.8;
+  background-color: var(--bglight);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -148,5 +150,37 @@ h1, h2 {
 img {
   max-width: 100%;
 }
+
+#postList-box {
+    display: grid;
+    width: 100%;
+    margin: 50px auto;
+    max-width: 1400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  
+  #postList-box{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 699px) {
+  
+  #postList-box{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #app-wrapper {
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 20px;
+  }
+
+} 
 
 </style>

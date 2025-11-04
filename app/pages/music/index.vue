@@ -27,18 +27,11 @@ const posts = await queryCollection('music').order('date', 'DESC').all()
 </template>
 
 <style>
-#postList-box {
-    display: grid;
-    width: 100%;
-    margin: 50px auto;
-    max-width: 1400px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-}
 
 .postList {
     width: 100%;
     border: 1px solid var(--accentdark);
+    background-color: white;
 }
 
 .postInfo {
