@@ -9,7 +9,7 @@ const musics = await queryCollection('music').order('date', 'DESC').limit(4).all
 
 <template>
     <div>
-        <h2>Portfolio (릴리즈 & 커미션)</h2>
+        <h2 class="listTitle">Portfolio (릴리즈 & 커미션)</h2>
         <div id="musicList-box">
             <div v-for="music in musics" :key="music.path.split('/')[2]" class="postList">
             <NuxtLink :to="music.path">
@@ -25,7 +25,7 @@ const musics = await queryCollection('music').order('date', 'DESC').limit(4).all
             </NuxtLink>
             </div>
         </div>
-        <h2>Posts</h2>
+        <h2 class="listTitle">Posts</h2>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">
             <NuxtLink :to="post.path">

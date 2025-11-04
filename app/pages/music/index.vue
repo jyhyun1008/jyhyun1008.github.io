@@ -8,7 +8,7 @@ const posts = await queryCollection('music').order('date', 'DESC').all()
 
 <template>
     <div>
-        <h1>Portfolio (릴리즈 & 커미션)</h1>
+        <h1 class="listTitle">Portfolio (릴리즈 & 커미션)</h1>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">
             <NuxtLink :to="post.path">

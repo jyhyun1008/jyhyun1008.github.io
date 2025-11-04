@@ -8,7 +8,7 @@ const posts = await queryCollection('blog').order('date', 'DESC').all()
 
 <template>
     <div>
-        <h1>Posts</h1>
+        <h1 class="listTitle">Posts</h1>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">
             <NuxtLink :to="post.path">
@@ -30,6 +30,7 @@ const posts = await queryCollection('blog').order('date', 'DESC').all()
 </template>
 
 <style>
+
 
 .postList {
     width: 100%;
