@@ -65,6 +65,14 @@ a {
 
 @media (max-width: 1200px) {
   
+  #titlebox {
+      padding: 10px;
+  }
+
+  #title {
+      font-size: 2rem;
+  }
+
   #navbox{
     display: none;
   }
@@ -87,7 +95,7 @@ a {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
     top: 0;
     left: 0;
     background-color: var(--bg);
