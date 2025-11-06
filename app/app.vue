@@ -134,6 +134,10 @@ h1, h2 {
   border-bottom: 1px solid var(--accentdark);
 }
 
+table {
+  table-layout: fixed;
+}
+
 span.buttonDark {
   padding: 10px;
   background-color: white;
