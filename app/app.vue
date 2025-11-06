@@ -138,6 +138,17 @@ table {
   table-layout: fixed;
 }
 
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin-left: 0;
+  padding-left: 2rem;
+}
+
+code, pre {
+  background-color: var(--accentdark);
+  padding: 3px;
+}
+
 span.buttonDark {
   padding: 10px;
   background-color: white;

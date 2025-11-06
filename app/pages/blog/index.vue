@@ -1,8 +1,13 @@
 
 <script setup>
 // queryContent를 사용하여 content/blog 디렉토리의 모든 Markdown 파일 쿼리
+const now = new Date()
+const nowStr = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`
 
-const posts = await queryCollection('blog').order('date', 'DESC').all()
+const posts = await queryCollection('blog')
+.where('date', '<', nowStr)
+.order('date', 'DESC')
+.all()
 
 </script>
 
