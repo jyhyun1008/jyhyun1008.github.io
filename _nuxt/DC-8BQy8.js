@@ -1,1 +1,0 @@
-import{_ as o,c as r,o as n,H as s}from"./CC7-6MVi.js";const t={};function c(e,a){return n(),r("strong",null,[s(e.$slots,"default")])}const l=Object.assign(o(t,[["render",c]]),{__name:"ProseStrong"});export{l as default};
