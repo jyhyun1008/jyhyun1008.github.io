@@ -15,8 +15,11 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
         <h1 style="text-align: center; border-bottom: 0;">{{post.title}}</h1>
         <p style="text-align: center; border-bottom: 0;">{{post.description}}</p>
         <p style="text-align: center; font-size: 0.9rem">{{post.date.split('T')[0]}}</p>
-  <!-- Render the blog post as Prose & Vue components -->
-  <ContentRenderer :value="post" style="margin: 50px 0;" />
+        <ContentRenderer :value="post" style="margin: 50px 0;" />
+        <div style="padding: 20px 0 50px 0; background-color: var(--bglight);">
+        <h2 style="text-align: center; border-bottom: 0;">이 포스트가 유익하거나 재미있었다면</h2>
+        <div style="text-align: center;"><a style="background-color: var(--accent); color: white; padding: 6px;" href="https://open.kakao.com/me/howeverina">오픈채팅방에서 후원하기</a></div>
+        </div>
     </div>
 </template>
 
