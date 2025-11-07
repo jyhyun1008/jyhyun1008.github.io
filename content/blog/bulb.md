@@ -1,6 +1,6 @@
 ---
 title: 셀로판지로 조명 색온도 조절하기
-description: 백색 조명을 은은한 노란색으로 만드는 꿀팁이에요
+description: 백색 조명을 은은한 노란색으로 만드는 꿀팁이에요.
 date: 2025-11-01
 thumb: /blog/bulb-6.jpeg
 tags: [작업실]

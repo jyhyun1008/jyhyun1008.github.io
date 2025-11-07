@@ -1,6 +1,6 @@
 ---
 title: Nuxt로 정적 블로그 만들기
-description: 
+description: Nuxt Content로 간단하게 블로그를 만들 수 있어요.
 date: 2025-11-07
 thumb: /blog/nuxtblog-1.png
 tags: [작업실]
