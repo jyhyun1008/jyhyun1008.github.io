@@ -1,1 +1,0 @@
-import{_ as t,c as n,a as o,o as s}from"./P6xl-ta9.js";const a={},c={class:"page-content"};function r(l,e){return s(),n("div",c,[...e[0]||(e[0]=[o("h1",null,"About However Ina",-1),o("p",null,"연이나에 대해서 ",-1)])])}const u=t(a,[["render",r]]);export{u as default};
