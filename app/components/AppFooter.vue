@@ -25,6 +25,7 @@ a {
     width: 100%;
     max-width: 1400px;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
