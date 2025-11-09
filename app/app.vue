@@ -110,10 +110,14 @@
 }
 
 :root {
-  --accent: #6200EE;
+  --accent: #FA4E79;
+  --accentdark: #ffcdda;
+  --bg: #FA4E79;
+  --bglight: #FFA6BE22;
+  /* --accent: #6200EE;
   --accentdark: #e3ccffff;
   --bg: #6200EE;
-  --bglight: #e3ccff22;
+  --bglight: #e3ccff22; */
 }
 
 body {
