@@ -27,7 +27,7 @@ const musics = await queryCollection('music')
                         <div>개인 음악 작업물에 대한 감상, 그리고 프로젝트를 꾸려가는 데 대한 기술적인 이야기를 다룹니다.</div>
                         <div><br /><a href="/about/"><span class="buttonDark">더 알아보기</span></a></div>
                     </div>
-                    <img src="/main2.png" id="mainImage"/>
+                    <img src="/main4.png" id="mainImage"/>
                     
                 </div>
             </div>
@@ -81,6 +81,7 @@ const musics = await queryCollection('music')
     border-radius: 10px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    border: 1px solid white;
 }
 
 #mainGrid {
