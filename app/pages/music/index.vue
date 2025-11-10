@@ -10,11 +10,20 @@ const posts = await queryCollection('music')
 .order('date', 'DESC')
 .all()
 
+function getPath(tag){
+    return `/musicall/${tag}`
+}
+
 </script>
 
 <template>
     <div>
         <h1 class="listTitle">Portfolio (릴리즈 & 커미션)</h1>
+        <div class="tag-box">
+            <code><NuxtLink :to="getPath('커버')">커버</NuxtLink></code>
+            <code><NuxtLink :to="getPath('커미션')">커미션</NuxtLink></code>
+            <code><NuxtLink :to="getPath('MR')">MR</NuxtLink></code>
+        </div>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">
             <NuxtLink :to="post.path">
@@ -25,7 +34,7 @@ const posts = await queryCollection('music')
                         <span class="postDate">{{ post.date.split('T')[0] }}</span>
                     </div>
                     <div style="display: flex; gap: 5px; margin-bottom: 8px;">
-                        <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code>
+                        <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem;"><NuxtLink :to="getPath(tag)">{{tag}}</NuxtLink></code>
                     </div>
                     <div class="postDesc">{{ post.description }}</div>
                 </div>
@@ -71,4 +80,5 @@ const posts = await queryCollection('music')
 .padding10 {
     padding: 10px;
 }
+
 </style>

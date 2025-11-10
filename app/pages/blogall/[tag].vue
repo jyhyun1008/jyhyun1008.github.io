@@ -1,11 +1,13 @@
 
 <script setup>
+const tagparam = useRoute().params.tag
 // queryContent를 사용하여 content/blog 디렉토리의 모든 Markdown 파일 쿼리
 const now = new Date()
 const nowStr = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`
 
 const posts = await queryCollection('blog')
 .where('date', '<', nowStr)
+.where('tags', 'LIKE', `%${tagparam}%`)
 .order('date', 'DESC')
 .all()
 
@@ -17,11 +19,8 @@ function getPath(tag){
 
 <template>
     <div>
-        <h1 class="listTitle">Posts</h1>
-        <div class="tag-box">
-            <code><NuxtLink :to="getPath('버츄얼')">버츄얼</NuxtLink></code>
-            <code><NuxtLink :to="getPath('작업실')">작업실</NuxtLink></code>
-        </div>
+        <h1 class="listTitle">Posts / {{tagparam}}</h1>
+        <div class="gotomain"><a href="/blog/">&lt; 메인으로</a></div>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">
             <NuxtLink :to="post.path">

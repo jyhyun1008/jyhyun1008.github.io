@@ -198,6 +198,16 @@ img {
     margin: 0.67em auto;
 }
 
+.blog-content a, .gotomain a {
+  color: var(--accent);
+}
+
+.tag-box {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
 @media (min-width: 700px) and (max-width: 1200px) {
   
   #postList-box, #musicList-box{

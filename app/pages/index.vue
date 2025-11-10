@@ -14,6 +14,15 @@ const musics = await queryCollection('music')
 .limit(4)
 .all()
 
+
+function getMusicPath(tag){
+    return `/musicall/${tag}`
+}
+
+function getBlogPath(tag){
+    return `/blogall/${tag}`
+}
+
 </script>
 
 <template>
@@ -42,7 +51,7 @@ const musics = await queryCollection('music')
                     <div class="postTitle">{{ music.title }}</div>
                     <span v-if="music.date" class="postDate">{{ music.date.split('T')[0] }}</span>
                     </div>
-                    <div style="display: flex; gap: 5px; margin-bottom: 8px;"><code v-for="tag in music.tags|| []" :key="music.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code></div>
+                    <div style="display: flex; gap: 5px; margin-bottom: 8px;"><code v-for="tag in music.tags|| []" :key="music.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;"><NuxtLink :to="getMusicPath(tag)">{{tag}}</NuxtLink></code></div>
                     <div class="postDesc">{{ music.description }}</div>
                 </div>
             </NuxtLink>
@@ -58,7 +67,7 @@ const musics = await queryCollection('music')
                     <div class="postTitle">{{ post.title }}</div>
                     <span v-if="post.date" class="postDate">{{ post.date.split('T')[0] }}</span>
                     </div>
-                    <div style="display: flex; gap: 5px; margin-bottom: 8px;"><code v-for="tag in post.tags|| []" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code></div>
+                    <div style="display: flex; gap: 5px; margin-bottom: 8px;"><code v-for="tag in post.tags || []" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;"><NuxtLink :to="getBlogPath(tag)">{{tag}}</NuxtLink></code></div>
                     <div class="postDesc">{{ post.description }}</div>
                 </div>
             </NuxtLink>

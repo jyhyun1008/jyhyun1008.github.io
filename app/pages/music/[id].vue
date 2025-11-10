@@ -4,13 +4,17 @@ const slug = useRoute().params.id
 const { data: post } = await useAsyncData(`music-${slug}`, () => {
   return queryCollection('music').path(`/music/${slug}`).first()
 })
+
+function getPath(tag){
+    return `/musicall/${tag}`
+}
 </script>
 
 <template>
     <div class="blog-content">
         <div><a href="/music/">&lt; 메인으로</a></div>
         <div style="display: flex; gap: 5px; justify-content: center; margin-top: 50px;">
-            <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code>
+            <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;"><NuxtLink :to="getPath(tag)">{{tag}}</NuxtLink></code>
         </div>
         <h1 style="text-align: center; border-bottom: 0;">{{post.title}}</h1>
         <p style="text-align: center; border-bottom: 0;">{{post.description}}</p>
@@ -39,9 +43,5 @@ const { data: post } = await useAsyncData(`music-${slug}`, () => {
     max-width: 740px;
     width: 100%;
     margin: 0 auto;
-}
-
-.blog-content a {
-  color: var(--accent);
 }
 </style>

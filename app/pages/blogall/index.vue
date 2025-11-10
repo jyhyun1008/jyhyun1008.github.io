@@ -8,11 +8,19 @@ const posts = await queryCollection('blog')
 .order('date', 'DESC')
 .all()
 
+function getPath(tag){
+    return `/blogall/${tag}`
+}
+
 </script>
 
 <template>
     <div>
         <h1 class="listTitle">Posts</h1>
+        <div class="tag-box">
+            <code><NuxtLink :to="getPath('버츄얼')">버츄얼</NuxtLink></code>
+            <code><NuxtLink :to="getPath('작업실')">작업실</NuxtLink></code>
+        </div>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">
             <NuxtLink :to="post.path">
@@ -23,7 +31,7 @@ const posts = await queryCollection('blog')
                         <span class="postDate">{{ post.date.split('T')[0] }}</span>
                     </div>
                     <div style="display: flex; gap: 5px; margin-bottom: 8px;">
-                        <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code>
+                        <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;"><NuxtLink :to="getPath(tag)">{{tag}}</NuxtLink></code>
                     </div>
                     <div class="postDesc">{{ post.description }}</div>
                 </div>
