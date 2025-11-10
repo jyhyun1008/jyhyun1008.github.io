@@ -31,7 +31,7 @@ function getPath(tag){
                         <span class="postDate">{{ post.date.split('T')[0] }}</span>
                     </div>
                     <div style="display: flex; gap: 5px; margin-bottom: 8px;">
-                        <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;"><NuxtLink :to="getPath(tag)">{{tag}}</NuxtLink></code>
+                        <code v-for="tag in post.tags" :key="post.tags" style="font-size: 0.8rem; background-color: var(--accentdark); padding: 3px;">{{tag}}</code>
                     </div>
                     <div class="postDesc">{{ post.description }}</div>
                 </div>
