@@ -21,6 +21,7 @@ function getPath(tag){
         <div class="tag-box">
             <code><NuxtLink :to="getPath('버츄얼')">버츄얼</NuxtLink></code>
             <code><NuxtLink :to="getPath('작업실')">작업실</NuxtLink></code>
+            <code><NuxtLink :to="getPath('개발')">개발</NuxtLink></code>
         </div>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">

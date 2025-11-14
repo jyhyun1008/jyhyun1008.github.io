@@ -9,4 +9,4 @@ import AppHeader from '~/components/AppHeader.vue';
     <slot />
     <AppFooter />
   </div>
-</template>
+</template>p
