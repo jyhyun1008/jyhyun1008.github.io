@@ -20,9 +20,11 @@ function getPath(tag){
     <div>
         <h1 class="listTitle">Portfolio (릴리즈 & 커미션)</h1>
         <div class="tag-box">
+            <code><NuxtLink :to="getPath('자작곡')">자작곡</NuxtLink></code>
             <code><NuxtLink :to="getPath('커버')">커버</NuxtLink></code>
             <code><NuxtLink :to="getPath('커미션')">커미션</NuxtLink></code>
             <code><NuxtLink :to="getPath('MR')">MR</NuxtLink></code>
+            <code><NuxtLink :to="getPath('믹싱')">믹싱</NuxtLink></code>
         </div>
         <div id="postList-box">
             <div v-for="post in posts" :key="post.path.split('/')[2]" class="postList">
