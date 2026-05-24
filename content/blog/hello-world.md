@@ -1,7 +1,7 @@
 ---
 title: 블로그를 새로 만들었습니다
 description: Nuxt 4와 @nuxt/content로 새 블로그/포트폴리오 사이트를 만들었습니다.
-date: 2025-05-24
+date: 2026-05-24
 tags: [dev, nuxt, blog]
 ---
 
