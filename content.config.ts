@@ -12,9 +12,9 @@ const baseSchema = z.object({
 
 export default defineContentConfig({
   collections: {
-    portfolio: defineCollection({
+    works: defineCollection({
       type: 'page',
-      source: 'portfolio/**/*.md',
+      source: 'works/**/*.md',
       schema: baseSchema,
     }),
     blog: defineCollection({

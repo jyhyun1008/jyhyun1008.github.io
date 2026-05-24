@@ -9,7 +9,7 @@
     </div>
 
     <section v-if="portfolioItems.length" class="section">
-      <h2 class="section-title">포트폴리오</h2>
+      <h2 class="section-title">작업물</h2>
       <div class="grid">
         <PostCard
           v-for="item in portfolioItems"
@@ -48,9 +48,9 @@
 const route = useRoute()
 const tag = computed(() => route.params.tag as string)
 
-const [{ data: allPortfolio }, { data: allBlog }] = await Promise.all([
-  useAsyncData(`tag-portfolio-${tag.value}`, () =>
-    queryCollection('portfolio').order('date', 'DESC').all()
+const [{ data: allWorks }, { data: allBlog }] = await Promise.all([
+  useAsyncData(`tag-works-${tag.value}`, () =>
+    queryCollection('works').order('date', 'DESC').all()
   ),
   useAsyncData(`tag-blog-${tag.value}`, () =>
     queryCollection('blog').order('date', 'DESC').all()
@@ -58,7 +58,7 @@ const [{ data: allPortfolio }, { data: allBlog }] = await Promise.all([
 ])
 
 const portfolioItems = computed(() =>
-  (allPortfolio.value ?? []).filter((item) => item.tags?.includes(tag.value))
+  (allWorks.value ?? []).filter((item) => item.tags?.includes(tag.value))
 )
 const blogPosts = computed(() =>
   (allBlog.value ?? []).filter((item) => item.tags?.includes(tag.value))

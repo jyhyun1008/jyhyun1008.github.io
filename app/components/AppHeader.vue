@@ -3,7 +3,7 @@
     <div class="container header__inner">
       <NuxtLink to="/" class="header__logo">연이나의 블로그</NuxtLink>
       <nav class="header__nav">
-        <NuxtLink to="/portfolio" class="header__nav-link">포트폴리오</NuxtLink>
+        <NuxtLink to="/works" class="header__nav-link">작업물</NuxtLink>
         <NuxtLink to="/blog" class="header__nav-link">블로그</NuxtLink>
         <NuxtLink to="/about" class="header__nav-link">소개</NuxtLink>
       </nav>

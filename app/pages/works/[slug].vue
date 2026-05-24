@@ -31,15 +31,15 @@
     </article>
 
     <div class="article-nav">
-      <NuxtLink to="/portfolio" class="back-link">← 포트폴리오 목록</NuxtLink>
+      <NuxtLink to="/works" class="back-link">← 작업 목록</NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
-const { data: page } = await useAsyncData(`portfolio-${route.params.slug}`, () =>
-  queryCollection('portfolio').path(`/portfolio/${route.params.slug}`).first()
+const { data: page } = await useAsyncData(`works-${route.params.slug}`, () =>
+  queryCollection('works').path(`/works/${route.params.slug}`).first()
 )
 
 if (!page.value) throw createError({ statusCode: 404 })

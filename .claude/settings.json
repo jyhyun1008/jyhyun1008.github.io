@@ -18,10 +18,14 @@
       "Bash(node -e \"const { chromium } = require\\('playwright'\\); \\(async \\(\\) => { const b = await chromium.launch\\({ args: ['--no-sandbox'] }\\); const p = await b.newPage\\(\\); await p.goto\\('http://localhost:3001'\\); await p.waitForSelector\\('text=HoweverIna'\\); await p.screenshot\\({ path: '/tmp/v2-home.png', fullPage: false }\\); await p.goto\\('http://localhost:3001/portfolio'\\); await p.waitForTimeout\\(2000\\); await p.screenshot\\({ path: '/tmp/v2-portfolio.png', fullPage: false }\\); await p.goto\\('http://localhost:3001/blog'\\); await p.waitForTimeout\\(2000\\); await p.screenshot\\({ path: '/tmp/v2-blog.png', fullPage: false }\\); await b.close\\(\\); console.log\\('done'\\); }\\)\\(\\)\")",
       "Bash(npx playwright *)",
       "Bash(pkill -f \"nuxt dev\")",
-      "Bash(npm run dev > /tmp/dev.log 2>&1 & *)"
+      "Bash(npm run dev > /tmp/dev.log 2>&1 & *)",
+      "Bash(sed -i '' 's|/portfolio|/works|g; s|portfolio-all|works-all|g; s|portfolio-|works-|g; s|queryCollection\\('\\\\''portfolio'\\\\''\\)|queryCollection\\('\\\\''works'\\\\''\\)|g' \\\\ *)",
+      "Bash(sed -i '' 's/포트폴리오 보기/작업 보기/g; s/최근 포트폴리오/최근 작업/g' /Users/jay/Documents/GitHub/jyhyun1008.github.io/app/pages/index.vue)",
+      "Bash(sed -i '' s/포트폴리오/작업/g /Users/jay/Documents/GitHub/jyhyun1008.github.io/app/pages/works/index.vue)"
     ],
     "additionalDirectories": [
-      "/tmp"
+      "/tmp",
+      "/Users/jay/Documents/GitHub/jyhyun1008.github.io/app/pages/tags"
     ]
   }
 }

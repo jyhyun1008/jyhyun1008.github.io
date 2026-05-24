@@ -7,7 +7,7 @@
           <h1 class="hero__title">연이나의 블로그</h1>
           <p class="hero__sub">음악 / 기술 / 창작</p>
           <div class="hero__links">
-            <NuxtLink to="/portfolio" class="btn btn--primary">포트폴리오 보기</NuxtLink>
+            <NuxtLink to="/works" class="btn btn--primary">작업 보기</NuxtLink>
             <NuxtLink to="/blog" class="btn btn--ghost">블로그</NuxtLink>
           </div>
         </div>
@@ -18,8 +18,8 @@
     <section class="section">
       <div class="container">
         <div class="section__header">
-          <h2 class="section__title">최근 포트폴리오</h2>
-          <NuxtLink to="/portfolio" class="section__more">전체 보기 →</NuxtLink>
+          <h2 class="section__title">최근 작업</h2>
+          <NuxtLink to="/works" class="section__more">전체 보기 →</NuxtLink>
         </div>
         <div class="grid">
           <PostCard
@@ -63,7 +63,7 @@
 <script setup lang="ts">
 const [{ data: recentPortfolio }, { data: recentBlog }] = await Promise.all([
   useAsyncData('home-portfolio', () =>
-    queryCollection('portfolio').order('date', 'DESC').limit(3).all()
+    queryCollection('works').order('date', 'DESC').limit(3).all()
   ),
   useAsyncData('home-blog', () =>
     queryCollection('blog').order('date', 'DESC').limit(4).all()
