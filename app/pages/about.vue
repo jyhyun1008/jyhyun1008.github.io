@@ -2,7 +2,7 @@
   <div class="container--narrow">
     <header class="about-header">
       <div class="about-avatar">
-        <img src="/avatar.png" alt="HoweverIna" />
+        <span class="about-avatar__initials">이나</span>
       </div>
       <h1 class="about-name">HoweverIna (연이나)</h1>
       <p class="about-bio">음악가 / 개발자 / 버튜버</p>
@@ -41,12 +41,16 @@ useHead({ title: '소개 | HoweverIna' })
   overflow: hidden;
   margin-bottom: 1.25rem;
   border: 3px solid var(--color-primary);
+  background: #e6faf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.about-avatar__initials {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 .about-name {
