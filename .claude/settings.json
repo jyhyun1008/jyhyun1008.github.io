@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/)",
+      "Bash(curl -s \"http://localhost:3001/_content/query?collection=portfolio\")",
+      "Bash(xargs sed -i '' 's/\\\\._path/\\\\.path/g')",
+      "Bash(pkill -f \"nuxt dev --port 3001\")",
+      "Bash(npm run dev -- --port 3001 > /tmp/v2-dev.log 2>&1 & *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/portfolio)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/blog)",
+      "Bash(timeout 5 bash -c 'until curl -sf http://localhost:3001 >/dev/null; do sleep 1; done')",
+      "Bash(chromium-cli --session v2blog)",
+      "Bash(which chromium *)",
+      "Read(//usr/bin/**)",
+      "Bash(node -e \"const { chromium } = require\\('playwright'\\); \\(async \\(\\) => { const b = await chromium.launch\\({ args: ['--no-sandbox'] }\\); const p = await b.newPage\\(\\); await p.goto\\('http://localhost:3001'\\); await p.waitForSelector\\('text=HoweverIna'\\); await p.screenshot\\({ path: '/tmp/v2-home.png', fullPage: false }\\); await p.goto\\('http://localhost:3001/portfolio'\\); await p.waitForTimeout\\(2000\\); await p.screenshot\\({ path: '/tmp/v2-portfolio.png', fullPage: false }\\); await p.goto\\('http://localhost:3001/blog'\\); await p.waitForTimeout\\(2000\\); await p.screenshot\\({ path: '/tmp/v2-blog.png', fullPage: false }\\); await b.close\\(\\); console.log\\('done'\\); }\\)\\(\\)\")",
+      "Bash(npx playwright *)",
+      "Bash(pkill -f \"nuxt dev\")",
+      "Bash(npm run dev > /tmp/dev.log 2>&1 & *)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}

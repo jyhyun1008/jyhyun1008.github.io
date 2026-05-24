@@ -1,25 +1,86 @@
 <template>
-    <div class="page-content">
-        <h1>About However Ina</h1>
-        <img src="/main5.png" />
-        <p><b>연이나 / However Ina</b></p>
-        <p>음악과 그림과 버튜버를 포함해서 이것저것 합니다. 이 블로그를 만들긴 했는데 개발은 완전히 취미에요.</p>
-        <h2>제가 건드렸던 분야들</h2>
-        <p>제가 건드리고 있는 분야들은 다음과 같아요..</p>
-        <ul>
-            <li><b>음악</b> (작사, 작곡, 기타, 베이스 등등)</li>
-            <li>그림 (캐주얼 일러스트, 웹 연재)</li>
-            <li>3D (캐드, 블렌더)</li>
-            <li>웹 프론트엔드 (React, Vue)</li>
-            <li>천문학, 조선시대 천문학, 자연과학, 역사 등 모듬 학문</li>
-        </ul>
-        <p>아래는 한때 찍먹해 본 적 있기는 한데 요새는 안 건드리는 것들이에요.</p>
-        <ul>
-            <li>수공예 (간단한 뜨개 도안 제작 및 판매)</li>
-            <li>폰트 제작</li>
-            <li>웹게임 제작</li>
-            <li>글쓰기</li>
-            <li>등등...</li>
-        </ul>
+  <div class="container--narrow">
+    <header class="about-header">
+      <div class="about-avatar">
+        <img src="/avatar.png" alt="HoweverIna" />
+      </div>
+      <h1 class="about-name">HoweverIna (연이나)</h1>
+      <p class="about-bio">음악가 / 개발자 / 버튜버</p>
+      <div class="about-links">
+        <a href="https://twitter.com/howeverina" target="_blank" rel="noopener" class="about-link">Twitter</a>
+        <a href="https://github.com/jyhyun1008" target="_blank" rel="noopener" class="about-link">GitHub</a>
+      </div>
+    </header>
+
+    <div class="prose about-content">
+      <h2>소개</h2>
+      <p>안녕하세요, 연이나입니다. 음악 창작과 개발을 즐깁니다.</p>
     </div>
+  </div>
 </template>
+
+<script setup lang="ts">
+useHead({ title: '소개 | HoweverIna' })
+</script>
+
+<style scoped>
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+}
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 3px solid var(--color-primary);
+}
+
+.about-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.about-bio {
+  margin-top: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.about-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.about-link {
+  padding: 0.375rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: all 0.15s;
+}
+
+.about-link:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.about-content {
+  padding-bottom: 2rem;
+}
+</style>

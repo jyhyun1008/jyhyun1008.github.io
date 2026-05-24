@@ -1,12 +1,22 @@
-<script setup>
-import AppHeader from '~/components/AppHeader.vue';
-
-</script>
-
 <template>
-  <div>
+  <div class="layout">
     <AppHeader />
-    <slot />
+    <main class="layout__main">
+      <slot />
+    </main>
     <AppFooter />
   </div>
-</template>p
+</template>
+
+<style scoped>
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__main {
+  flex: 1;
+  padding: 2rem 0;
+}
+</style>

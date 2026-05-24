@@ -1,29 +1,26 @@
-import { defineContentConfig, defineCollection } from '@nuxt/content'
-import { z } from 'zod'
+import { defineContentConfig, defineCollection, z } from '@nuxt/content'
+
+const baseSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  date: z.string(),
+  tags: z.array(z.string()).default([]),
+  thumbnail: z.string().optional(),
+  youtube: z.string().optional(),
+  draft: z.boolean().default(false),
+})
 
 export default defineContentConfig({
   collections: {
+    portfolio: defineCollection({
+      type: 'page',
+      source: 'portfolio/**/*.md',
+      schema: baseSchema,
+    }),
     blog: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
-      schema: z.object({
-        title: z.string(),
-        date: z.date(),
-        description: z.string().optional(),
-        thumb: z.string().optional(),
-        tags: z.array(z.string()).optional()
-      })
+      source: 'blog/**/*.md',
+      schema: baseSchema,
     }),
-    music: defineCollection({
-      type: 'page',
-      source: 'music/*.md',
-      schema: z.object({
-        title: z.string(),
-        date: z.date(),
-        description: z.string().optional(),
-        youtube: z.string(),
-        tags: z.array(z.string()).optional()
-      })
-    })
-  }
+  },
 })

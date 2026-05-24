@@ -1,35 +1,30 @@
 <template>
-  <div id="footerborder">
-    <div id="footerbox">
-        <div>HoweverIna Studio | © 2025. 연이나 All rights reserved.</div>
-        <div>howeverina@proton.me | X @however_ina | Fedi @however_ina@stella.place</div>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© {{ new Date().getFullYear() }} HoweverIna. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 </template>
 
-<style lang="css">
-
-a {
-    color: inherit;
-    text-decoration: none;
+<style scoped>
+.footer {
+  margin-top: 5rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
 }
 
-#footerborder {
-  background-color: var(--accentdark);
-  color: var(--accent);
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
 }
 
-#footerbox {
-    margin: 0 auto;
-    padding: 50px 10px;
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 0.9rem;
+.footer__copy {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
 }
 
 </style>

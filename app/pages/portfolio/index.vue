@@ -1,24 +1,26 @@
 <template>
   <div class="container">
     <div class="page-header">
-      <h1 class="page-title">블로그</h1>
+      <h1 class="page-title">포트폴리오</h1>
     </div>
 
     <TagList v-model="selectedTag" :tags="allTags" class="mb-tags" />
 
-    <div class="post-list">
+    <div class="grid">
       <PostCard
-        v-for="post in paged"
-        :key="post.path"
-        :to="post.path"
-        :title="post.title"
-        :description="post.description"
-        :date="post.date"
-        :tags="post.tags"
+        v-for="item in paged"
+        :key="item.path"
+        :to="item.path"
+        :title="item.title"
+        :description="item.description"
+        :date="item.date"
+        :tags="item.tags"
+        :thumbnail="item.thumbnail"
+        :youtube="item.youtube"
       />
     </div>
 
-    <p v-if="filtered.length === 0" class="empty">포스트가 없습니다.</p>
+    <p v-if="filtered.length === 0" class="empty">항목이 없습니다.</p>
 
     <Pagination v-model="currentPage" :total-pages="totalPages" />
   </div>
@@ -27,8 +29,8 @@
 <script setup lang="ts">
 const PAGE_SIZE = 12
 
-const { data: posts } = await useAsyncData('blog-all', () =>
-  queryCollection('blog').order('date', 'DESC').all()
+const { data: items } = await useAsyncData('portfolio-all', () =>
+  queryCollection('portfolio').order('date', 'DESC').all()
 )
 
 const selectedTag = ref('')
@@ -38,13 +40,13 @@ watch(selectedTag, () => { currentPage.value = 1 })
 
 const allTags = computed(() => {
   const set = new Set<string>()
-  posts.value?.forEach((p) => p.tags?.forEach((t: string) => set.add(t)))
+  items.value?.forEach((item) => item.tags?.forEach((t: string) => set.add(t)))
   return [...set].sort()
 })
 
 const filtered = computed(() => {
-  if (!selectedTag.value) return posts.value ?? []
-  return (posts.value ?? []).filter((p) => p.tags?.includes(selectedTag.value))
+  if (!selectedTag.value) return items.value ?? []
+  return (items.value ?? []).filter((item) => item.tags?.includes(selectedTag.value))
 })
 
 const totalPages = computed(() => Math.ceil(filtered.value.length / PAGE_SIZE))
@@ -69,10 +71,10 @@ const paged = computed(() => {
   margin-bottom: 2rem;
 }
 
-.post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
 .empty {

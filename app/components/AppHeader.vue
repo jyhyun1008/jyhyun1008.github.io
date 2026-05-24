@@ -1,106 +1,56 @@
 <template>
-  <div id="titleborder">
-    <div id="titlebox">
-        <div id="title"><a href="/">Howeverina Studio</a></div>
-        <div id="navbox">
-            <div class="nav-item"><a href="/about/">About Me</a></div>
-            <div class="nav-item"><a href="/music/">Portfolio</a></div>
-            <div class="nav-item"><a href="/blog/">Blog</a></div>
-            <div class="nav-item"><a href="/links/">Links</a></div>
-        </div>
-        <div id="navbox-mobile">
-          <div id="nav-icon">≡</div>
-          <div id="nav-mobile-menu">
-            <div class="nav-item"><a href="/about/">About Me</a></div>
-            <div class="nav-item"><a href="/music/">Portfolio</a></div>
-            <div class="nav-item"><a href="/blog/">Blog</a></div>
-            <div class="nav-item"><a href="/links/">Links</a></div>
-          </div>
-        </div>
+  <header class="header">
+    <div class="container header__inner">
+      <NuxtLink to="/" class="header__logo">연이나의 블로그</NuxtLink>
+      <nav class="header__nav">
+        <NuxtLink to="/portfolio" class="header__nav-link">포트폴리오</NuxtLink>
+        <NuxtLink to="/blog" class="header__nav-link">블로그</NuxtLink>
+        <NuxtLink to="/about" class="header__nav-link">소개</NuxtLink>
+      </nav>
     </div>
-  </div>
+  </header>
 </template>
 
-<style lang="css">
-
-a {
-    color: inherit;
-    text-decoration: none;
+<style scoped>
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  height: 56px;
+  display: flex;
+  align-items: center;
 }
 
-#titleborder {
-  background-color: var(--bg);
-  color: white;
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-#titlebox {
-    margin: 0 auto;
-    padding: 50px 10px;
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header__logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.5px;
 }
 
-#title {
-  font-family: "League Script", cursive;
-    font-weight: 200;
-    font-size: 3rem;
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
 }
 
-#navbox {
-    display: flex;
-    gap: 4rem;
+.header__nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: color 0.15s;
 }
 
-.nav-item:hover {
-    color: var(--accentdark);
-    font-weight: 700;
+.header__nav-link:hover,
+.header__nav-link.router-link-active {
+  color: var(--color-primary);
 }
-
-#navbox-mobile {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  
-  #titlebox {
-      padding: 10px;
-  }
-
-  #title {
-      font-size: 2rem;
-  }
-
-  #navbox{
-    display: none;
-  }
-
-  #navbox-mobile {
-    display: flex;
-    font-size: 3rem;
-    padding: 0 1rem;
-  }
-
-  #navbox-mobile #nav-mobile-menu {
-    display: none;
-  }
-
-  #navbox-mobile:hover #nav-mobile-menu {
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 70vh;
-    top: 0;
-    left: 0;
-    background-color: var(--bg);
-  }
-
-} 
-
 </style>
