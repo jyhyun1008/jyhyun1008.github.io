@@ -7,7 +7,7 @@
           <h1 class="hero__title">연이나의 블로그</h1>
           <p class="hero__sub">음악 / 기술 / 창작</p>
           <div class="hero__links">
-            <NuxtLink to="/works" class="btn btn--primary">작업 보기</NuxtLink>
+            <NuxtLink to="/works" class="btn btn--primary">작업물</NuxtLink>
             <NuxtLink to="/blog" class="btn btn--ghost">블로그</NuxtLink>
           </div>
         </div>

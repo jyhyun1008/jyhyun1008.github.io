@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="page-header">
-      <h1 class="page-title">작업</h1>
+      <h1 class="page-title">작업물</h1>
     </div>
 
     <TagList v-model="selectedTag" :tags="allTags" class="mb-tags" />

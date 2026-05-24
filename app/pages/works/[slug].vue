@@ -31,7 +31,7 @@
     </article>
 
     <div class="article-nav">
-      <NuxtLink to="/works" class="back-link">← 작업 목록</NuxtLink>
+      <NuxtLink to="/works" class="back-link">← 작업물 목록</NuxtLink>
     </div>
   </div>
 </template>
